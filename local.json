@@ -1,8 +1,8 @@
 {
 	"phabricator.show-prototypes": true,
-    "phabricator.base-uri": "localhost:8081",
-	"mysql.user": "admin",
-    "mysql.pass": "admin",
+    "phabricator.base-uri": "{{PHAB_URI}}",
+	"mysql.user": "{{MYSQL_USER}}",
+    "mysql.pass": "{{MYSQL_PASS}}",
     "mysql.host": "localhost",
     "mysql.port": "3306"
 }
