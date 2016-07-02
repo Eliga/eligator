@@ -26,4 +26,4 @@ chown -R mysql:mysql /var/lib/mysql
 cd /opt/phabricator && ./bin/storage upgrade --force
 cd /opt/phabricator && ./bin/phd restart
 
-/opt/update.sh
+/bin/bash /opt/startup.sh

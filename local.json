@@ -1,7 +1,8 @@
 {
-    "phabricator.base-uri": "",
-	"mysql.user": "root",
-    "mysql.pass": "",
+	"phabricator.show-prototypes": true,
+    "phabricator.base-uri": "localhost:8081",
+	"mysql.user": "admin",
+    "mysql.pass": "admin",
     "mysql.host": "localhost",
     "mysql.port": "3306"
 }

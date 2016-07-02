@@ -10,12 +10,12 @@ COPY alias.txt /alias.txt
 RUN cat /alias.txt >> /etc/bash.bashrc
 
 # Git to retreive phabricator source
-RUN apt-get install -y git ssh wget
 RUN mkdir /var/run/sshd
+RUN apt-get install -y git wget
 
 # Supervisor
 RUN apt-get install -y supervisor
-COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
+COPY supervisord.conf /etc/supervisor/conf.d/eligator.conf
 RUN mkdir -p /var/log/supervisor
 
 # Enabled mod rewrite for phabricator
@@ -32,12 +32,12 @@ RUN chmod +x /opt/startup.sh
 RUN chmod +x /opt/update.sh
 
 COPY phabricator.conf /etc/apache2/sites-available/phabricator.conf
-RUN ln -s /etc/apache2/sites-available/phabricator.conf /etc/apache2/sites-enabled/phabricator.conf
 RUN rm -f /etc/apache2/sites-enabled/000-default
+RUN ln -s /etc/apache2/sites-available/phabricator.conf /etc/apache2/sites-enabled/phabricator.conf
 
 RUN ulimit -c 10000
  
-EXPOSE 3306 80 22
+EXPOSE 80
 
 CMD ["/usr/bin/supervisord"] 
 
