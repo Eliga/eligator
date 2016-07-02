@@ -30,13 +30,14 @@ ln -s /opt/preamble.php /opt/phabricator/support/
 /opt/phabricator/bin/config set mysql.pass ${MYSQL_PASS}
 /opt/phabricator/bin/config set phabricator.base-uri ${PHAB_URI}
 
-#sed -e "s/{{MYSQL_USER}}/${MYSQL_USER}/g" \
-#    -e "s/{{MYSQL_PASS}}/${MYSQL_PASS}/g" \
-#    -e "s/{{PHAB_URI}}/${PHAB_URI}/g" \
-#    -i /opt/phabricator/conf/local/local.json
+sed -e "s/{{SSMTP_EMAIL}}/${SSMTP_EMAIL}/g" \
+    -e "s/{{SSMTP_PASS}}/${SSMTP_PASS}/g" \
+    -e "s/{{PHAB_URI}}/${PHAB_URI}/g" \
+    -i /etc/ssmtp/sstmp.conf
 
 cd /opt/phabricator && ./bin/storage upgrade --force
 cd /opt/phabricator && ./bin/phd restart
 
 /bin/bash /opt/update.sh
+
 

@@ -1,4 +1,4 @@
-#/bin/bash
+#!/bin/bash
 
 cd /opt/libphutil && git pull
 cd /opt/arcanist && git pull
