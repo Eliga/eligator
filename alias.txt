@@ -1,0 +1,4 @@
+alias PS='ps -eaf | grep -v grep | grep'
+alias l='ls -lart --color'
+alias m='less -erX'
+alias h='history | grep -v grep | grep'

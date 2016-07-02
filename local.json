@@ -1,0 +1,7 @@
+{
+    "phabricator.base-uri": "",
+	"mysql.user": "root",
+    "mysql.pass": "",
+    "mysql.host": "localhost",
+    "mysql.port": "3306"
+}
