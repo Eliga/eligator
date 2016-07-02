@@ -29,7 +29,7 @@ COPY ./update.sh /opt/update.sh
 RUN chmod +x /opt/startup.sh
 RUN chmod +x /opt/update.sh
 
-COPY local.json /opt/phabricator/config/local/local.json
+COPY local.json /opt/local.json
 
 COPY phabricator.conf /etc/apache2/sites-available/phabricator.conf
 RUN rm -f /etc/apache2/sites-enabled/000-default

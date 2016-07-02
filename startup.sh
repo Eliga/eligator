@@ -18,10 +18,12 @@ git clone git://github.com/facebook/libphutil.git
 git clone git://github.com/facebook/arcanist.git
 git clone git://github.com/facebook/phabricator.git
 
-chmod 666 /opt/phabricator/conf/local/local.json
 
 # if container restart, fix mysql rights
 chown -R mysql:mysql /var/lib/mysql
+
+chmod 666 /opt/local.json
+ln -s /opt/local.json /opt/phabricator/config/local/
 
 /opt/phabricator/bin/config set mysql.user ${MYSQL_USER}
 /opt/phabricator/bin/config set mysql.pass ${MYSQL_PASS}
