@@ -23,7 +23,9 @@ Build Container
 Run Container
 -------------
 export MYSQL_USER="user"
+
 export MYSQL_PASS="password"
+
 export PHAB_URI="http://phab.uri:8081"
 
 ./run.sh
