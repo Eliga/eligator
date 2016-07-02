@@ -10,7 +10,7 @@ COPY alias.txt /alias.txt
 RUN cat /alias.txt >> /etc/bash.bashrc
 
 # Git to retreive phabricator source
-RUN apt-get install -y git wget
+RUN apt-get install -y git wget php5-curl php5-gd
 
 # Supervisor
 COPY supervisord.conf /etc/supervisor/conf.d/eligator.conf
@@ -29,10 +29,12 @@ COPY ./update.sh /opt/update.sh
 RUN chmod +x /opt/startup.sh
 RUN chmod +x /opt/update.sh
 
+COPY my.cnf /etc/mysql/conf.d/my.cnf
+COPY php.ini /etc/php5/apache2/conf.d/php.ini
 COPY local.json /opt/local.json
 
 COPY phabricator.conf /etc/apache2/sites-available/phabricator.conf
-RUN rm -f /etc/apache2/sites-enabled/000-default
+RUN rm -f /etc/apache2/sites-enabled/000-default.conf
 RUN ln -s /etc/apache2/sites-available/phabricator.conf /etc/apache2/sites-enabled/phabricator.conf
 
 RUN ulimit -c 10000
