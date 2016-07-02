@@ -24,6 +24,7 @@ chown -R mysql:mysql /var/lib/mysql
 
 chmod 666 /opt/local.json
 ln -s /opt/local.json /opt/phabricator/config/local/
+ln -s /opt/preamble.php /opt/phabricator/support/
 
 /opt/phabricator/bin/config set mysql.user ${MYSQL_USER}
 /opt/phabricator/bin/config set mysql.pass ${MYSQL_PASS}

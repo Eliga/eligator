@@ -9,8 +9,8 @@ RUN apt-get upgrade -y
 COPY alias.txt /alias.txt
 RUN cat /alias.txt >> /etc/bash.bashrc
 
-# Git to retreive phabricator source
-RUN apt-get install -y git wget php5-curl php5-gd
+# Install some packages
+RUN apt-get install -y git wget php5-curl php5-gd ssmtp
 
 # Supervisor
 COPY supervisord.conf /etc/supervisor/conf.d/eligator.conf
@@ -31,7 +31,9 @@ RUN chmod +x /opt/update.sh
 
 COPY my.cnf /etc/mysql/conf.d/my.cnf
 COPY php.ini /etc/php5/apache2/conf.d/php.ini
+COPY preamble.php /opt/preamble.php
 COPY local.json /opt/local.json
+COPY ssmtp.conf /etc/ssmtp/sstp.conf
 
 COPY phabricator.conf /etc/apache2/sites-available/phabricator.conf
 RUN rm -f /etc/apache2/sites-enabled/000-default.conf
