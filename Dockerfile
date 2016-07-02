@@ -33,7 +33,7 @@ COPY my.cnf /etc/mysql/conf.d/my.cnf
 COPY php.ini /etc/php5/apache2/conf.d/php.ini
 COPY preamble.php /opt/preamble.php
 COPY local.json /opt/local.json
-COPY ssmtp.conf /etc/ssmtp/sstp.conf
+COPY ssmtp.conf /etc/ssmtp/ssmtp.conf
 
 COPY phabricator.conf /etc/apache2/sites-available/phabricator.conf
 RUN rm -f /etc/apache2/sites-enabled/000-default.conf

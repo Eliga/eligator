@@ -6,8 +6,8 @@ docker run -i -d --privileged 						\
 	-e "MYSQL_USER=$MYSQL_USER"						\
 	-e "MYSQL_PASS=$MYSQL_PASS"						\
 	-e "PHAB_URI=$PHAB_URI"							\
-	-e "MYSQL_USER=$MYSQL_USER"						\
-	-e "MYSQL_PASS=$MYSQL_PASS"						\
-	-e "PHAB_URI=$PHAB_URI"							\
+	-e "SSMTP_SERVER=$SSMTP_SERVER"					\
+	-e "SSMTP_EMAIL=$SSMTP_EMAIL"					\
+	-e "SSMTP_PASS=$SSMTP_PASS"						\
 	zapaz/eligator:latest
 

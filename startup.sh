@@ -31,6 +31,7 @@ ln -s /opt/preamble.php /opt/phabricator/support/
 /opt/phabricator/bin/config set phabricator.base-uri ${PHAB_URI}
 
 sed -e "s/{{SSMTP_EMAIL}}/${SSMTP_EMAIL}/g" \
+    -e "s/{{SSMTP_SERVER}}/${SSMTP_SERVER}/g" \
     -e "s/{{SSMTP_PASS}}/${SSMTP_PASS}/g" \
     -e "s/{{PHAB_URI}}/${PHAB_URI}/g" \
     -i /etc/ssmtp/sstmp.conf
