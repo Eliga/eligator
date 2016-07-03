@@ -3,6 +3,6 @@
     "phabricator.base-uri": "{{PHAB_URI}}",
 	"mysql.user": "{{MYSQL_USER}}",
     "mysql.pass": "{{MYSQL_PASS}}",
-    "mysql.host": "localhost",
+    "mysql.host": "mysql",
     "mysql.port": "3306"
 }

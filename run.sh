@@ -9,5 +9,6 @@ docker run -i -d --privileged 						\
 	-e "SSMTP_SERVER=$SSMTP_SERVER"					\
 	-e "SSMTP_EMAIL=$SSMTP_EMAIL"					\
 	-e "SSMTP_PASS=$SSMTP_PASS"						\
+	--link mysql:mysql 								\
 	zapaz/eligator:latest
 

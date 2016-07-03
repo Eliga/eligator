@@ -8,9 +8,6 @@ Dockerfile
 Derived form old version of yesnault/docker-phabricator
 With Ubuntu, Apache and MySQL
 
-Data Volume :
-- mysql : /var/lib/mysql => /home/eligator/mysql
-
 Exposed Port :
 - 80 => 8081
 
