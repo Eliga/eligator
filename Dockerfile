@@ -30,7 +30,6 @@ RUN chmod +x /opt/update.sh
 
 COPY php.ini /etc/php5/apache2/conf.d/php.ini
 COPY preamble.php /opt/preamble.php
-COPY local.json /opt/local.json
 COPY ssmtp.conf /etc/ssmtp/ssmtp.conf
 
 COPY phabricator.conf /etc/apache2/sites-available/phabricator.conf

@@ -6,10 +6,10 @@ git clone git://github.com/facebook/arcanist.git
 git clone git://github.com/facebook/phabricator.git
 
 
-chmod 666 /opt/local.json
-ln -s /opt/local.json /opt/phabricator/config/local/
 ln -s /opt/preamble.php /opt/phabricator/support/
 
+/opt/phabricator/bin/config set mysql.host ${MYSQL_HOST}
+/opt/phabricator/bin/config set mysql.port ${MYSQL_PORT}
 /opt/phabricator/bin/config set mysql.user ${MYSQL_USER}
 /opt/phabricator/bin/config set mysql.pass ${MYSQL_PASS}
 /opt/phabricator/bin/config set phabricator.base-uri ${PHAB_URI}

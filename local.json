@@ -1,8 +1,0 @@
-{
-	"phabricator.show-prototypes": true,
-    "phabricator.base-uri": "{{PHAB_URI}}",
-	"mysql.user": "{{MYSQL_USER}}",
-    "mysql.pass": "{{MYSQL_PASS}}",
-    "mysql.host": "mysql",
-    "mysql.port": "3306"
-}
