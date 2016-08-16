@@ -9,7 +9,7 @@ Derived form old version of yesnault/docker-phabricator
 With Ubuntu, Apache and MySQL
 
 Exposed Port :
-- 80 => 8081
+- 80
 
 
 Build Container
@@ -33,4 +33,3 @@ Run Eligator
 ---------------
 
 Go to http://phab.uri:8081
-
