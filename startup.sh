@@ -6,7 +6,7 @@ git clone git://github.com/facebook/arcanist.git
 git clone git://github.com/facebook/phabricator.git
 
 
-ln -s /opt/preamble.php /opt/phabricator/support/
+cp /opt/preamble.php /opt/phabricator/support/
 
 /opt/phabricator/bin/config set mysql.host ${MYSQL_HOST}
 /opt/phabricator/bin/config set mysql.port ${MYSQL_PORT}
