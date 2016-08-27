@@ -32,4 +32,4 @@ export PHAB_URI="http://phab.uri:8081"
 Run Eligator
 ---------------
 
-Go to http://phab.uri:8081
+Go to http://phab.uri
