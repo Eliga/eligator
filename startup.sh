@@ -5,7 +5,7 @@ git clone git://github.com/facebook/libphutil.git
 git clone git://github.com/facebook/arcanist.git
 git clone git://github.com/facebook/phabricator.git
 
-
+sed -e "s/{{HTTPS}}/${HTTPS}/g" -i /opt/preamble.php
 cp /opt/preamble.php /opt/phabricator/support/
 
 /opt/phabricator/bin/config set mysql.host ${MYSQL_HOST}

@@ -1,3 +1,3 @@
 <?php
-$_SERVER['HTTPS'] = (bool) $_ENV["HTTPS"];
+$_SERVER['HTTPS'] = {{HTTPS}};
 ?>
