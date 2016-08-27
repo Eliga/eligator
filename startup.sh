@@ -24,5 +24,3 @@ cd /opt/phabricator && ./bin/storage upgrade --force
 cd /opt/phabricator && ./bin/phd restart
 
 /bin/bash /opt/update.sh
-
-
