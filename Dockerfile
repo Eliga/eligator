@@ -10,7 +10,7 @@ COPY alias.txt /alias.txt
 RUN cat /alias.txt >> /etc/bash.bashrc
 
 # Install some packages
-RUN apt-get install -y git wget php5-curl php5-gd ssmtp
+RUN apt-get install -y git wget php5-curl php5-gd ssmtp python-pygments
 
 # Supervisor
 COPY supervisord.conf /etc/supervisor/conf.d/eligator.conf
